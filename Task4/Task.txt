@@ -1,0 +1,7 @@
+This folder contains the code submissions for the session 4 of the Parallel SMP.
+
+Task 1 - Implement the producer consumer problem as discussed in the session.
+
+Task 2 - Implement the reader writer problem with the necessary conditions as discussed in the session.
+
+
