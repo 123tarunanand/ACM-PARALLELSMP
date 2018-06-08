@@ -23,8 +23,10 @@ void main()
      start=omp_get_wtime();
      #pragma omp parallel
     {
+        
         i=omp_get_thread_num();
-          
+        #pragma omp critical
+        { 
         for(j=0;j<n;j++)
         {
          sum=0;
@@ -32,7 +34,8 @@ void main()
              sum+=(a[i][k]*b[k][j]);
         
         c[i][j]=sum;
-        }  
+        } 
+        } 
       
     }
      printf("\n run time:%lf",omp_get_wtime()-start);
