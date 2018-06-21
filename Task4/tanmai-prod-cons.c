@@ -3,16 +3,17 @@
 #include <omp.h>
 
 int main() {
+     omp_set_num_threads(2);
     
+    omp_lock_t wlock;
+    omp_init_lock(&wlock);
+	
 	int n, k = 0;
     printf("num elements: ");
     scanf("%d",&n);
     
     int a[n];
-    omp_set_num_threads(2);
-    
-    omp_lock_t wlock;
-    omp_init_lock(&wlock);
+   
     
 	#pragma omp parallel 
 	{  
