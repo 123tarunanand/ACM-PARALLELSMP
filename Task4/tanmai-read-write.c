@@ -2,7 +2,7 @@
 #include <omp.h>
 
 int main() {
-	//int read,writ,count=0,val=0;
+	
 	int val = 0;
 	printf("4 readers, 4 writers\n");
 	omp_set_num_threads(8);
